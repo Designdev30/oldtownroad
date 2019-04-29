@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Ajax, Rest & Promises</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+ </head>
+ <body>
+   <h1>Ajax, Rest and Promises</h1>
+   <!-- // Exercise 1: REST
+// Create buttons that do each of the tasks below
+// Render the results to the page in html elements.
+// Hide the results from the previous actions
+// Get all posts
+// Get post with id of 10
+// Get the comments from post with id of 12
+// note: comments are part of a different data model, you'll need to structure your endpoint to ask for all of the comments that belong to post #12
+// Get all the posts from user with id of 2
+// Create a new post and log the id generated for it by the server
+// Replace the post with id of 12 and render the responseJSON
+// Update the title of post with id of 12 and render responseJSON
+// Delete the post with id of 12 and render a success message
+// Display a list of posts.
+// When the user clicks on a post, display all the comments from that post
+// Display a link back to all posts -->
+   <div class="container">
+     <div class = col-md-6 text-center>
+     <button id="get-all" class="btn btn-info btn-lg" onclick="getAll()">Get All Posts</button>
+     
+     <button id="hide" class="btn btn-info btn-lg"onclick="hideAll()">Hide</button>
+      
+     <button id="replace" class="btn btn-info btn-lg"onclick="replacePost()">Replace Post 12</button>
+      
+     <button id="update" class="btn btn-info btn-lg"onclick="updateTitle()">Update Post 12 Title</button>
+      
+     <button id="delete" class="btn btn-info btn-lg"onclick="deletePost()">
+       Delete Post 12
+     </button>
+     <button id="update">Update</button>
+     <form id="getById">
+       <label
+         >Get Post by ID
+         <input type="number" placeholder="get post by user id" id="userId" />
+         <input type="submit" placeholder="Get Post" />
+       </label>
+     </form>
+     <form id="getComments">
+       <label
+         >Get Comments by ID
+         <input type="number" placeholder="get post by user id" id="userId2" />
+         <input type="submit" placeholder="Get Comment" />
+       </label>
+     </form>
+     <form id="create-post">
+       <label>
+         Create a New Post:
+         <input type="text" placeholder="Title of Post" id="createTitle" />
+         <input type="text" placeholder="Post Body" id="createBody" />
+         <input type="submit" placeholder="Submit" />
+       </label>
+     </form>
+     <div id="posts">
+       <ul id="post"></ul>
+     </div>
+   </div>
+   <script src="./jex.js"></script>
+ </body>
+</html>
